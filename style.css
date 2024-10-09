@@ -1,0 +1,210 @@
+body {
+    font-family: "Fira Mono", monospace;
+    background-color: #bcd5b0;
+    margin: 100;
+    position: relative;
+    padding-top: 80px;
+}
+/*
+colour muligheder: 
+#099d02;
+6ab867;
+#6d9f33
+cee3be
+a5ce89
+#aeffaa
+#bcd5b0
+*/
+
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #bcd5b0;
+    color: #7a4a20;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+    z-index: 1000;
+}
+
+
+/* this is the SINE AI JING title*/
+.headline {
+    font-family: Impact, kafeine;
+    font-stretch: condensed;
+    font-size: 80px;
+    letter-spacing: 20px;
+    text-align: center;
+    cursor: crosshair;
+}
+
+/* Container for columns */   /*PARENT*/
+.container {
+    display: flex; /* Use flexbox to create a flexible layout */
+    justify-content: space-around; /* Distribute columns evenly */
+    flex-wrap: wrap; /* Allow columns to wrap to next line if needed */
+    font-size:25px;
+    padding-top: 20px; /* Adjust as needed */
+    padding-bottom: 60px; /* Space for footer */
+}
+
+/* Columns styling */
+.content-column, .about-column{
+    flex: 1 1 100%; /* Each column takes up 25% width */
+    max-width: 25%; /* Set maximum width for flexibility */
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #bcd5b0; /* Adjust background color as needed */
+    text-align: center;
+    border: 1px solid #bcd5b0; /* Optional: Add border for separation */
+    border-radius: 5px; /* Optional: Add border radius for rounded corners */
+    margin: 10px; /* Adjust margin as needed */
+}
+
+
+/*this is the about column*/
+.about-column {
+    font-size: 18px;
+}
+
+.middle {
+    width: 25%;
+}
+
+.project-item {    /*CHILD inherits from container */
+    font-family: "Fira Mono", monospace;
+    background-color: #bcd5b0;
+    margin-bottom: 10px;
+    font-size: 0.7em;      
+    border: 1px solid #bcd5b0;
+    border-radius: 5px;
+    overflow: hidden;
+   
+}
+
+.project-item:hover {
+    transform: translateY(-3px);
+   /* box-shadow: 0 4px 8px #694729;*/
+    transition: transform 0.6s;
+}
+
+
+/* this is the title for the project */
+.project-item .title {
+    font-family: "Fira Mono", monospace;
+    background-color:#bcd5b0;
+    color:#7a4a20;
+    padding: 10px;
+    font-size: 1.2em;    /*font size relative to it's parent's font size -> project item is the font size*/
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #bcd5b0;
+    transition: color 0.7s, background-color 0.2s;
+    cursor: crosshair;
+}
+
+.title:hover {
+    color: #065a0a;
+}
+
+.project {
+    font-family: "Fira Mono", monospace;
+    display: none; /* Ensure the projects are hidden by default */
+    width: 100%;
+    padding: 25px;
+    text-align: left;
+    background-color: #bcd5b0;
+    color:#7a4a20;
+    font-size: 18px;
+    padding: 10px;
+    line-height: 1.5;
+    transition: max-height 0.7s ease-out;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px; 
+}
+
+/*text within the containers*/
+p {
+    font-family: "Fira Mono", monospace; /* Use the specified font family */
+    margin: 0; /* Remove default margin */
+    padding: 10px; /* Add padding around the text for better spacing */
+    text-align: justify; /* Justify text alignment for a clean look */
+    text-align-last: left; /* Align the last line to the left */
+    margin-bottom: 15px; /* Space below each paragraph */
+    font-weight: 300; /* Light font weight */
+    color: #7a4a20; /* Text color */
+    line-height: 1.6; /* Increase line height for better readability */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    overflow-wrap: break-word; /* Ensure long words break to prevent overflow */
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #bcd5b0;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+    box-shadow: 0 -4px 6px #7a4a20;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.footer p {
+    color: #7a4a20;
+    margin:0;  /*remove default margin*/
+    font-weight: bold;
+}
+
+/*Hyperlinks!!*/
+a {
+    color: #7a4a20; /* Use your preferred color */
+    text-decoration: none; /* Removes underline by default */
+}
+
+/* Styles the link when hovered over */
+a:hover {
+    color: #065a0a;
+}
+
+/* Styles the link when clicked */
+a:active {
+    color: #065a0a; /* Darker color when active */
+}
+
+
+h2 {
+    font-family: "Fira Mono", monospace;
+    font-weight: 700;
+    color: #7a4a20;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+button.title {
+    font-weight: 500;
+}
+
+
+
+/* adjusting the screens*/
+@media (max-width: 768px) {
+    .content-column, .about-column {
+        flex: 1 1 100%;  /* Take up full width on small screens */
+        max-width: 100%;
+    }
+}
