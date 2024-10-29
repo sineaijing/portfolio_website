@@ -37,7 +37,7 @@ a5ce89
     font-size: 80px;
     letter-spacing: 20px;
     text-align: center;
-    cursor: crosshair;
+    cursor: pointer;
 }
 
 /* Container for columns */   /*PARENT*/
@@ -77,11 +77,13 @@ a5ce89
 .project-item {    /*CHILD inherits from container */
     font-family: "Fira Mono", monospace;
     background-color: #bcd5b0;
+    margin-top: 1px;
     margin-bottom: 10px;
     font-size: 0.7em;      
     border: 1px solid #bcd5b0;
     border-radius: 5px;
     overflow: hidden;
+
    
 }
 
@@ -98,7 +100,7 @@ a5ce89
     background-color:#bcd5b0;
     color:#7a4a20;
     padding: 10px;
-    font-size: 1.2em;    /*font size relative to it's parent's font size -> project item is the font size*/
+    font-size: 1.4em;    /*font size relative to it's parent's font size -> project item is the font size*/
     border: none;
     text-align: center;
     font-weight: bold;
@@ -106,7 +108,8 @@ a5ce89
     display: block;
     border-bottom: 1px solid #bcd5b0;
     transition: color 0.7s, background-color 0.2s;
-    cursor: crosshair;
+    cursor: pointer;
+    margin-bottom: 2px;
 }
 
 .title:hover {
@@ -200,11 +203,45 @@ button.title {
 }
 
 
+/*RESPONSIVE*/
 
 /* adjusting the screens*/
 @media (max-width: 768px) {
     .content-column, .about-column {
         flex: 1 1 100%;  /* Take up full width on small screens */
         max-width: 100%;
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1024px) {
+    .content-column, .about-column {
+        flex: 1 1 45%;  /* Take up about half the width */
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-column, .about-column {
+        flex: 1 1 100%;  /* Take up full width on small screens */
+        max-width: 100%;
+    }
+    .headline {
+        font-size: 50px;
+        letter-spacing: 5px;
+    }
+}
+@media (max-width: 480px) {
+    .headline {
+        font-size: 40px;
+        letter-spacing: 2px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .footer {
+        font-size: 14px;
     }
 }
